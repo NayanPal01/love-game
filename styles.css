@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('love_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+#questionImage, #acceptImage {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#yesButton {
+    background-color: #ff69b4;
+    color: #fff;
+}
+
+#yesButton:hover {
+    background-color: #ff1493;
+}
+
+#noButton {
+    background-color: #ff1493;
+    color: #fff;
+}
+
+#noButton:hover {
+    background-color: #ff69b4;
+}
+
+#response {
+    display: none; /* Hide by default */
+    margin-top: 20px;
+    font-size: 2em;
+    color: #fff; /* Ensure text color is white for visibility */
+    text-align: center;
+}
+
+#acceptImage {
+    max-width: 80%; /* Adjust size if needed */
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+
+@keyframes love-animation {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes heart-fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: pink;
+    clip-path: polygon(50% 0%, 61% 15%, 75% 30%, 100% 30%, 85% 50%, 100% 75%, 50% 100%, 0% 75%, 15% 50%, 0% 30%, 25% 30%, 39% 15%);
+    animation: heart-fall 4s linear infinite;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}
